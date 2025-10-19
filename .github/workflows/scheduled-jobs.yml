@@ -41,58 +41,7 @@ jobs:
       fail-fast: false
       matrix:
         script:
-          - bctc-bbc.js
-          - bctc-nht.js
-          - bctc-gas.js
-          - bctc-pgc.js
-          - bctc-pgi.js
-          - bctc-pms.js
-          - bctc-pvs.js
-          - bctc-sd9.js
-          - bctc-ssg.js
-          - bctc-tbc.js
-          - bctc-ted.js
-          - bctc-vcs.js
-          - bctc-abw.js
-          - bctc-agr.js
-          - bctc-apg.js
-          - bctc-bms.js
-          - bctc-bsi.js
-          - bctc-bvs.js
-          - bctc-cts.js
-          - bctc-evs.js
-          - bctc-fts.js
-          - bctc-ors.js
-          - bctc-sbs.js
-          - bctc-shs.js
-          - bctc-vci.js
-          - bctc-vds.js
-          - bctc-vfs.js
-          - bctc-vix.js
-          - bctc-eib.js
-          - bctc-lpb.js
-          - bctc-ssb.js
-          - bctc-tcb.js
-          - bctc-vcb.js
-          - bctc-vib.js
-          - bctc-vnd.js
-          - bctc-vpb.js
-          - bctc-msb.js
-          - bctc-abb.js
-          - bctc-ast.js
-          - bctc-bab.js
-          - bctc-bvb.js
-          - bctc-dnw.js
-          - bctc-klb.js
-          - bctc-nab.js
-          - bctc-ocb.js
-          - bctc-pgb.js
-          - bctc-pvi.js
-          - bctc-sgb.js
-          - bctc-tpb.js
-          - bctc-vab.js
-          - bctc-vbb.js
-          - bctc-aps.js
+          - bctc-bcc.js
 
     steps:
       - name: "❗️ Skip 23:00 if in special periods"
