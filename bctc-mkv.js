@@ -35,20 +35,20 @@ async function fetchAndExtractData() {
 
     const html = response.data;
     const $ = cheerio.load(html);
-    const currentYear = new Date().getFullYear().toString();
+    const currentYear = new Date().getFullYear();
     // Lấy tối đa 5 báo cáo mới nhất
     const names = [];
     $('.post-title').each((_, el) => {
       const nameRaw = $(el).text().trim();
       const name = he.decode(nameRaw);
-      names.push(name);
+      if (name.includes(currentYear) || name.includes(currentYear - 1))
+        names.push(name);
     });
 
     if (names.length === 0) {
       console.log('Không tìm thấy báo cáo tài chính nào.');
       return;
     }
-    console.log('📢 [bctc-mbs.js:50]', names);
     // Lọc ra các báo cáo chưa có trong DB
     const newNames = await filterNewNames(names, COMPANIES.MKV);
     console.log('📢 [bctc-cdn.js:46]', newNames);
